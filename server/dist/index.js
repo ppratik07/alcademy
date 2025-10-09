@@ -2,7 +2,7 @@ import express from 'express';
 import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
 import curriculumRoutes from './routes/curriculamRoutes';
-;
+import sessionRoutes from './routes/sessionRoutes';
 import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use('/api/curriculum', curriculumRoutes);
+app.use('/api/sessions', sessionRoutes);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
