@@ -1,6 +1,10 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
 import { authMiddleware } from '../middleware/middleware';
+import multer from 'multer';
+import path from 'path';
+import fs from 'fs';
+import {OpenAI} from 'openai';
 
 const router = express.Router();
 const prisma = new PrismaClient();

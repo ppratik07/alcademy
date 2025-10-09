@@ -17,13 +17,16 @@
     "@prisma/client": "^6.16.3",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "openai": "^6.2.0",
     "prisma": "^6.16.3"
   },
   "prisma": {
-   "seed": "bunx tsx ./src/prisma/seed.ts"
+    "seed": "bunx tsx ./src/prisma/seed.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
